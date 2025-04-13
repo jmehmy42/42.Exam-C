@@ -17,7 +17,8 @@ int		main(int argc, char const *argv[])
 	int		i;
 	int		flg;
 
-	if (argc == 2)
+	flg = 0;
+    if (argc == 2)
 	{
 		i = 0;
 		while (argv[1][i] == ' ' || argv[1][i] == '\t')
