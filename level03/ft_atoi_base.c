@@ -26,7 +26,8 @@ int		ft_atoi_base(const char *str, int base)
 
 	if (!str[0] || (base < 2 || base > 16))
 		return (0);
-	nbr = 0;
+	i = 0;
+    nbr = 0;
 	sign = 1;
 	while (str[i] == '\t' || str[i] == '\v' || str[i] == '\n' || \
 		str[i] == ' ' || str[i] == '\r' || str[i] == '\f')
@@ -36,9 +37,9 @@ int		ft_atoi_base(const char *str, int base)
 			sign *= -1;
 	while (str[i] && nbr_inbase(str[i], base))
 	{
-		if (str[i] >= 'A' && 'F' >= str[i])
+		if (str[i] >= 'A' && str[i] <= 'F)
 			nbr = (nbr * base) + (str[i] - 'A' + 10);
-		else if (str[i] >= 'a' && 'f' >= str[i])
+		else if (str[i] >= 'a' && str[i] <= 'f')
 			nbr = (nbr * base) + (str[i] - 'a' + 10);
 		else
 			nbr = (nbr * base) + (str[i] - '0');
